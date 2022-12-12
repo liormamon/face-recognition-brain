@@ -81,8 +81,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-    fetch('https://git.heroku.com/warm-sierra-88597.git'
-    , {
+    fetch('https://git.heroku.com/warm-sierra-88597.git/image', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -94,7 +93,7 @@ class App extends Component {
       .then(response => {
         console.log('hi', response)
         if (response) {
-            fetch('http://localhost:3001/image', {
+            fetch('https://git.heroku.com/warm-sierra-88597.git/imageurl', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
